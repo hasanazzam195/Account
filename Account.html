@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Setting</title>
+        <link href="Account.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            function Toggle(value){
+                switch(value){
+                    case 'General':
+                    document.getElementById('General').style.display="block";
+                    document.getElementById('Password').style.display="none";
+                    document.getElementById('Info').style.display="none";
+                    document.getElementById('Notification').style.display="none";
+                    break;
+                    case 'Password':
+                    document.getElementById('General').style.display="none";
+                    document.getElementById('Password').style.display=" block";
+                    document.getElementById('Info').style.display="none";
+                    document.getElementById('Notification').style.display="none";
+        
+                    break;
+                    case 'Info':
+                    document.getElementById('General').style.display="none";
+                    document.getElementById('Password').style.display="none";
+                    document.getElementById('Info').style.display="block";
+                    document.getElementById('Notification').style.display="none";
+                    break;
+                    case 'Notification':
+                    document.getElementById('General').style.display="none";
+                    document.getElementById('Password').style.display="none";
+                    document.getElementById('Info').style.display="none";
+                    document.getElementById('Notification').style.display="block";
+                    break;
+                }
+            }
+            </script>
+        
+
+    </head>
+
+    <body>
+        <h1>Account Setting</h1>
+
+        <div class="main">
+
+            <div class="floating">
+                <div class="list" onclick="Toggle('General')"> <span class="listItem"> General </span>  </div>
+                <div class="list" onclick="Toggle('Password')"> <span class="listItem"> Change password </span>  </div>
+                <div class="list" onclick="Toggle('Info')" > <span class="listItem"> Info </span>  </div>
+                <div class="list" onclick="Toggle('Notification')"> <span class="listItem"> notification </span>  </div>
+
+            </div>
+
+
+            <div class="floating" id="General">
+             <div class="Box1">
+                <div class="floating">   <img src="avatar.png" alt="avatar" class="imageEdit" > </div>
+                <div class="floating">
+                <div class="floating"> <button class="ButtonUpload" > Upload new photo </button> </div>
+                <div class="floating"> <button class="ButtonReset" > Reset </button> </div>
+                <div class="text3" > Allowed JPG,GIF or PNG ,Max size 800k </div>
+                </div>
+             </div>
+
+             <div> <span class="pass"> Username </span> </div>
+             <div> <input class="text1" type="text"> </div>
+
+             <div style="margin-top: 10px;"> <span class="pass"> Name </span> </div>
+             <div> <input class="text1" type="text"> </div>
+
+             <div style="margin-top: 10px;"> <span class="pass"> Email </span> </div>
+             <div> <input class="text1" type="text" required  > </div>
+
+             <div class="BoxEmail"> <div > Your Email is not confirmed. Please check your inbox</div> 
+                    <div class="text2">Resend confirmation</div>
+
+            </div>
+
+             <div style="margin-top: 10px;"> <span class="pass"> Company </span> </div>
+             <div> <input class="text1" type="text"> </div>
+
+             <div class="ButtonBox">
+
+             <div class="floating"> <button class="ButtonSave"> Save changes </button> </div>
+             <div class="floating"> <button class="ButtonCancel"> Cancel  </button> </div>
+
+            </div>
+
+            </div>
+
+            <div class="floating" style="display: none; padding-top: 25px; margin-left: 15px;" id="Password">
+
+                <div> <span class="pass"> Current password </span> </div>
+                <div> <input class="text1" type="password"> </div>
+
+                <div style="margin-top: 10px;"> <span class="pass"> New password </span> </div>
+                <div> <input class="text1" type="text"> </div>
+
+                <div style="margin-top: 10px;"> <span class="pass"> Repeat New password </span> </div>
+                <div> <input class="text1" type="text"> </div>
+
+                <div class="ButtonBox">
+
+                    <div class="floating"> <button class="ButtonSave"> Save changes </button> </div>
+                    <div class="floating"> <button class="ButtonCancel"> Cancel  </button> </div>
+       
+                </div>
+
+            </div>
+            <div class="floating" style="display: none;" id="Info">
+            
+                <div>
+
+                <div style="padding-top: 25px;">
+
+                <div> <span class="pass"> Bio </span> </div>
+                <div> <input class="text1" type="text"> </div>
+
+                </div>
+
+                <div style="padding-top: 10px;">
+
+                <div style="margin-top: 10px;"> <span class="pass"> Birthday</span> </div>
+                <div> <input class="text1" type="date"> </div>
+
+                </div>
+
+                <div style="padding-top: 10px;">
+
+                <div style="margin-top: 10px;"> <span class="pass"> Country </span> </div>
+                <div> 
+                        <select class="SelectCountry">
+                            <option>USA</option>
+                            <option>Jordan</option>
+                            <option>Italy</option>
+                        </select>
+                </div>
+
+                </div>
+
+                </div>
+
+                <div>
+
+                    <div style="margin-left: 15px;"> <h2> contact </h2> </div>
+
+                    <div>
+                        
+                        <div> <span class="pass"> Phone </span> </div>
+                        <div> <input class="text1" type="number"> </div> 
+
+                    </div>
+
+                    <div>
+                        
+                        <div style="margin-top: 10px;"> <span class="pass"> Wepsite </span> </div>
+                        <div> <input class="text1" type="url"> </div> 
+
+                    </div>
+
+                    <div class="ButtonBox" style="margin-top: 10px;">
+
+                        <div class="floating"> <button class="ButtonSave"> Save changes </button> </div>
+                        <div class="floating"> <button class="ButtonCancel"> Cancel  </button> </div>
+           
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="floating" style="display: none;" id="Notification">
+            
+                <div style="margin-left: 15px;">
+
+                    <div>
+
+                        <div>
+
+                            <div> <h2> Activity </h2> </div>
+                            <div> <input type="checkbox"> Email me when someone comment on my article </div>
+                            <div class="checkedit"> <input type="checkbox"> Email me when someone answers on forum thread </div>
+                            <div class="checkedit"> <input type="checkbox"> Email me when someone follows me </div>
+
+
+                        </div>
+
+                        <div>
+
+                            <div style="padding-top: 25px;">
+    
+                                <div> <h2> Application </h2> </div>
+                                
+                                <div> <input type="checkbox"> News and announcements </div>
+                                <div class="checkedit"> <input type="checkbox"> Weekly product updates </div>
+                                <div class="checkedit"> <input type="checkbox"> weekly blog digest </div>
+    
+    
+                            </div>
+
+                    </div>
+
+                </div>
+
+                <div style="float: right;width: 15px;"> <button class="ButtonSave"> Save changes </button> </div>
+
+            </div>
+
+
+        </div>
+
+
+    </body>
+</html>
